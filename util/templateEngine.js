@@ -1,11 +1,14 @@
 const fs = require("fs");
+const path = require("path");
 
 function readPage(filePath) {
     return fs.readFileSync(filePath).toString();
 }
 
 function renderPage(page, config={}) {
-    const navbar = fs.readFileSync("./public/components/navbar/navbar.html").toString().
+    const navbarFilePath = path.join(process.cwd(), "/public/components/navbar/navbar.html");
+    const footerFilePath = path.join(process.cwd(), "/public/components/footer/footer.html");
+    const navbar = fs.readFileSync(navbarFilePath).toString().
     replace(config.id, `${config.id} class="nav-link dropdown-toggle active"`).
     replace("$STYLESHEET", config.stylesheet);
 
