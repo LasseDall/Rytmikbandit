@@ -6,10 +6,8 @@ export function readPage(filePath) {
 
 export function renderPage(page, config={}) {
     const navbar = fs.readFileSync("./public/components/navbar/navbar.html").toString().
-    replace(
-        `id="5"`, 
-        `id="5" class="nav-link dropdown-toggle active"`
-    );
+    replace(config.id, `${config.id} class="nav-link dropdown-toggle active"`).
+    replace("$STYLESHEET", config.stylesheet);
 
     const footer = fs.readFileSync("./public/components/footer/footer.html").toString();
 
