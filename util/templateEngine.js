@@ -1,10 +1,10 @@
-import fs from "fs";
+const fs = require("fs");
 
-export function readPage(filePath) {
+function readPage(filePath) {
     return fs.readFileSync(filePath).toString();
 }
 
-export function renderPage(page, config={}) {
+function renderPage(page, config={}) {
     const navbar = fs.readFileSync("./public/components/navbar/navbar.html").toString().
     replace(config.id, `${config.id} class="nav-link dropdown-toggle active"`).
     replace("$STYLESHEET", config.stylesheet);
@@ -13,3 +13,5 @@ export function renderPage(page, config={}) {
 
     return navbar + page + footer;
 }
+
+module.exports = {readPage, renderPage}

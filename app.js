@@ -1,5 +1,5 @@
-import express from "express";
-import { frontpagePage, legPage, bevægelsePage, musikPage, sprogPage, fællesskabPage } from "./util/preparePage.mjs";
+const express = require("express");
+const { frontpagePage, legPage, bevægelsePage, musikPage, sprogPage, fællesskabPage } = require("./util/preparePage.js");
 
 const app = express();
 
@@ -36,4 +36,4 @@ app.listen(PORT, () => {
     console.log("Server is running on port:", PORT);
 });
 
-export default app;
+module.exports = app;
