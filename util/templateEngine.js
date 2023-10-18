@@ -12,7 +12,7 @@ function renderPage(page, config={}) {
     replace(config.id, `${config.id} class="nav-link dropdown-toggle active"`).
     replace("$STYLESHEET", config.stylesheet);
 
-    const footer = fs.readFileSync("./public/components/footer/footer.html").toString();
+    const footer = fs.readFileSync(footerFilePath).toString();
 
     return navbar + page + footer;
 }
