@@ -1,5 +1,5 @@
 import express from "express";
-import { frontpagePage, legPage, bevægelsePage, musikPage, sprogPage, fællesskabPage } from "./util/preparePage.js";
+import { frontpagePage, legPage, bevægelsePage, musikPage, sprogPage, fællesskabPage } from "./util/preparePage.mjs";
 
 const app = express();
 
