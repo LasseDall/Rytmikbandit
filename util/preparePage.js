@@ -1,37 +1,40 @@
 const { readPage, renderPage } = require("./templateEngine.js");
-const { rootPath } = require("../rootPath.js");
-const { path } = require("path");
+const path = require("path");
 
-
-const frontpage = readPage(`${rootPath}/public/pages/frontpage/frontpage.html`);
+const frontFilePath = path.join(process.cwd(), "/public/pages/frontpage/frontpage.html");
+const frontpage = readPage(frontFilePath);
 exports.frontpagePage = renderPage(frontpage);
 
-
-const leg = readPage(`${rootPath}/public/pages/leg/leg.html`);
+const legFilePath = path.join(process.cwd(), "/public/pages/leg/leg.html");
+const leg = readPage(legFilePath);
 exports.legPage = renderPage(leg, {
     id: 'id="5"',
     stylesheet:  '<link rel="stylesheet" href="/assets/css/pejlemærke.css"></link>'
 });
 
-const bevægelse = readPage(`${rootPath}/public/pages/bevægelse/bevægelse.html`);
+const bevægelseFilePath = path.join(process.cwd(), "/public/pages/bevægelse/bevægelse.html");
+const bevægelse = readPage(bevægelseFilePath);
 exports.bevægelsePage = renderPage(bevægelse, {
     id: 'id="5"',
     stylesheet:  '<link rel="stylesheet" href="/assets/css/pejlemærke.css"></link>'
 });
 
-const musik = readPage(`${rootPath}/public/pages/musik/musik.html`);
+const musikFilePath = path.join(process.cwd(), "/public/pages/musik/musik.html");
+const musik = readPage(musikFilePath);
 exports.musikPage = renderPage(musik, {
     id: 'id="5"',
     stylesheet:  '<link rel="stylesheet" href="/assets/css/pejlemærke.css"></link>'
 });
 
-const sprog = readPage(`${rootPath}/public/pages/sprog/sprog.html`);
+const sprogFilePath = path.join(process.cwd(), "/public/pages/sprog/sprog.html");
+const sprog = readPage(sprogFilePath);
 exports.sprogPage = renderPage(sprog, {
     id: 'id="5"',
     stylesheet:  '<link rel="stylesheet" href="/assets/css/pejlemærke.css"></link>'
 });
 
-const fællesskab = readPage(`${rootPath}/public/pages/fællesskab/fællesskab.html`);
+const fællesskabFilePath = path.join(process.cwd(), "/public/pages/fællesskab/fællesskab.html");
+const fællesskab = readPage(fællesskabFilePath);
 exports.fællesskabPage = renderPage(fællesskab, {
     id: 'id="5"',
     stylesheet:  '<link rel="stylesheet" href="/assets/css/pejlemærke.css"></link>'

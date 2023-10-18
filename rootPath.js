@@ -1,6 +1,0 @@
-exports.rootPath = __dirname;
-
-
-
-
-
