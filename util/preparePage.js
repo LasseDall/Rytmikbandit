@@ -1,5 +1,7 @@
 const { readPage, renderPage } = require("./templateEngine.js");
 const { rootPath } = require("../rootPath.js");
+const { path } = require("path");
+
 
 const frontpage = readPage(`${rootPath}/public/pages/frontpage/frontpage.html`);
 exports.frontpagePage = renderPage(frontpage);

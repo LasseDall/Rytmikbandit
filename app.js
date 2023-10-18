@@ -3,6 +3,7 @@ const { frontpagePage, legPage, bevægelsePage, musikPage, sprogPage, fællesska
 
 const app = express();
 
+app.use(express.static("util"));
 app.use(express.static("public"));
 
 
