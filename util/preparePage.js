@@ -2,10 +2,9 @@ const { readPage, renderPage } = require("./templateEngine.js");
 const path = require("path");
 
 const frontFilePath = path.join(process.cwd(), "/public/pages/frontpage/frontpage.html");
+console.log(frontFilePath);
 const frontpage = readPage(frontFilePath);
-exports.frontpagePage = renderPage(frontpage, {
-    stylesheet: `<link rel="stylesheet" href="./assets/css/pejlemærke.css"></link>`
-});
+exports.frontpagePage = renderPage(frontpage);
 
 const legFilePath = path.join(process.cwd(), "/public/pages/leg/leg.html");
 const leg = readPage(legFilePath);
