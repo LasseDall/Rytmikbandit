@@ -249,5 +249,9 @@ footer {
         width: 70px;
         height: auto;
     }
+
+    #front-image {
+        margin-top: 60px;
+    }
     
 }
