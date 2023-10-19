@@ -1,5 +1,5 @@
 const express = require("express");
-const { frontpagePage, legPage, bevægelsePage, musikPage, sprogPage, fællesskabPage } = require("./util/preparePage.js");
+const { frontpagePage, legPage, bevægelsePage, musikPage, sprogPage, fællesskabPage, certificeringPage } = require("./util/preparePage.js");
 
 const app = express();
 
@@ -28,6 +28,10 @@ app.get("/sprog", (req, res) => {
 
 app.get("/faellesskab", (req, res) => {
     res.send(fællesskabPage);
+});
+
+app.get("/certificering", (req, res) => {
+    res.send(certificeringPage);
 });
 
 const PORT = Number(process.env.PORT) || 8080;

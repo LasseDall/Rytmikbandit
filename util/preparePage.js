@@ -40,3 +40,10 @@ exports.fællesskabPage = renderPage(fællesskab, {
     id: 'id="5"',
     stylesheet:  `<link rel="stylesheet" href="./assets/css/pejlemærke.css"></link>`
 });
+
+const certificeringFilePath = path.join(process.cwd(), "/public/pages/certificering/certificering.html");
+const certificering = readPage(certificeringFilePath);
+exports.certificeringPage = renderPage(certificering, {
+    id: 'id="6"',
+    stylesheet:  `<link rel="stylesheet" href="./assets/css/pejlemærke.css"></link>`
+});

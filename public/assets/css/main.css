@@ -14,7 +14,7 @@ footer {
     font-weight: 500;
     padding: 2%;
     padding-left: 4%;
-  }
+}
 
 .navbar-nav .nav-link:hover {
     color: green !important;
@@ -85,7 +85,7 @@ footer {
 
 .element-header {
     padding-top: 5%;
-    font-size: 40px;
+    font-size: 4.5vw;
     font-family: monospace;
     font-weight:bolder;
     text-align: center;
@@ -95,7 +95,7 @@ footer {
     padding-top: 5%;
     padding-left: 4%;
     padding-right: 4%;
-    font-size: 37px;
+    font-size: 4.3vw;
     font-family: monospace;
     font-weight:bolder;
     text-align: center;
@@ -103,7 +103,7 @@ footer {
 
 .element-text {
     padding: 5%;
-    font-size: larger;
+    font-size: 1.6vw;
     font-family: monospace;
     font-weight: 600;
     text-align: center;
@@ -207,4 +207,47 @@ footer {
     .spacer-div {
         padding: 1px; 
     }
+
+    .comment-box {
+        display: none;
+    }
+
+    .spacer-div {
+        margin: 0px;
+        padding: 1;
+    }
+
+    .element-header {
+        font-size: 5vw;
+    }
+
+    .element-header-2 {
+        font-size: 4.8vw;
+    }
+
+    .element-text {
+        font-size: 3.5vw;
+    }
+
+    footer {
+        font-size: 2vw;
+        font-weight: 500;
+        padding: 2%;
+        padding-left: 4%;
+    }
+
+    #footer-logo {
+        width: 100%;
+        margin-left: 80%;
+    }
+
+    #footer-image-box {
+        max-width: 45%;
+    }
+
+    #logo {
+        width: 70px;
+        height: auto;
+    }
+    
 }
